@@ -86,16 +86,43 @@ bouton.addEventListener("click", function(){
     })    
 
 bouton.addEventListener("click",function(){
+        
         if (n==-1){
+            let p = document.createElement("p"); 
             vie = document.getElementById("answer").value;
-            for(let i=0; i<vie;i++){
-                let coeur = document.createElement("div");
-                coeur.classList.add("vie");
-                div[0].append(coeur);
+            if (!vie){
+                p.textContent ="Veuillez entrer une valeur";
             }
+            else if(isNaN(vie)){
+                p.textContent ="Veuillez entrer un nombre";
+            }
+            else if (vie<1){
+                p.textContent ="Impossible de mettre un nombre de vie inférieur à 1";
+            }
+            else if(vie>12){
+                p.textContent ="Trop de vies demandés 12 est le maximum pour plus de difficulté!";
+                vie = 12;
+                for(let i=0; i<vie;i++){
+                    let coeur = document.createElement("div");
+                    coeur.classList.add("vie");
+                    div[0].append(coeur);
+                }
+                document.querySelector("input").value='';
+                bouton.textContent = "Démarrer le jeu";
+                n+=1;
+            }
+            else{
+                for(let i=0; i<vie;i++){
+                    let coeur = document.createElement("div");
+                    coeur.classList.add("vie");
+                    div[0].append(coeur);
+                }
+                
+                bouton.textContent = "Démarrer le jeu";
+                n+=1;
+            }
+            div[1].append(p);
             document.querySelector("input").value='';
-            bouton.textContent = "Démarrer le jeu";
-            n+=1;
         }
 }) 
 
