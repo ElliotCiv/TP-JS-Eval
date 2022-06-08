@@ -1,0 +1,35 @@
+body{
+    background-color: midnightblue;
+}
+
+section{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+img{
+    height: 90vh;
+    margin-right: 50px;
+}
+h1{
+    font-size: 50px;
+    color: orangered;
+}
+p{
+    font-size: 20px;
+    color: orangered;
+}
+button{
+    color: midnightblue;
+    background-color: orangered;
+    border: none;
+    border-radius: 10px;
+    width: 15vw;
+    height: 5vh;
+    font-size: 20px;
+}
+hr{
+    width: 75vw;
+    margin: 30px auto 30px auto;
+    
+}
