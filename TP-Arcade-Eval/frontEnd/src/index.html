@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="./node_modules/nes.css/css/nes.min.css">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link type="text/css" rel="stylesheet" href="styleMenu.css">
+    <title>Fighting surface</title>
+</head>
+
+<body class="nes-pointer">
+    <main id="mainMenu"> </main>
+    <main id="header">
+        <article class="nes-container with-title is-centered is-dark">
+            <p class="title">Status</p>
+            <p class="status-bar">Bienvenue dans Fighting Surface</p>
+        </article>
+    </main>
+   
+    <main id="mainEndgame" class="disable">
+        <article class="nes-container is-dark with-title is-centered disable">
+            <p class="title">Votre Score</p>
+            <p>1</p>
+            <p>Merci d'entrer votre Score : </p>
+            <input type="text" id="name_field" class="nes-input">
+            <div>
+                <button class="nes-btn is-error" id="btnEndgameQuit">Quitter</button>
+                <button class="nes-btn is-success" id="btnEndgameSend">Envoyer</button> 
+            </div>
+            
+        </article>
+    </main>
+    
+    <main class="disable" id="mainJeu">
+        <article class="history">
+                <!-- <img src="img/barzork_bourrin.png" alt="" class="dead-enemy"> -->
+
+        </article>
+        <section class="allies">
+
+            <article class="action">
+                <button type="button" class="nes-btn is-disabled  attack-js">Attack</button>
+                <!-- Doit être gris par default une fois 5 attaque si le combat est encore ok alors il est activé -->
+                <button type="button" class="nes-btn is-disabled special-js">Special</button> 
+            </article>
+            <article>
+                <h2 class="allies-pp"></h2>
+                <img src="img/fighter.png" alt="">
+            </article>
+            <article class="life-bar">
+                <label for="allies-bar">Point de vie</label>
+                <progress class="nes-progress is-success" id="allies-bar" max="100" value="70"> 70% </progress>
+            </article>
+        </section>
+        <section class="turn-arrow">
+            <img src="img/arrow.png" alt="">
+        </section>
+        <section class="enemy">
+            <article>
+                <button type="button" class="nes-btn is-warning enemies-generator ">Genere un adversaire</button>
+            </article>
+            <article class="disable">
+                <h2 class="enemy-title"></h2>
+                <img src="" alt="" class="enemy-pp">
+            </article>
+            <article class="life-bar disable">
+                <label for="enemy-bar">Point de vie</label>
+                <progress class="nes-progress is-success" id="enemy-bar" max="100" value="70"><p>70%</p>  </progress>
+            </article>
+        </section>
+    </main>
+   
+            <article id="articleMenu" class="">
+                <button class="nes-btn is-warning" id="btn-Jouer">Jouer</button>
+                <button class="nes-btn is-warning" id="btnScores">Scores</button>
+                <button class="nes-btn is-warning" id="btn-Credits">Credits</button>
+            </article>
+            <article id="articleScores" class="disable">
+                <div class="nes-table-responsive" id="divScore">
+                    <table class="nes-table is-bordered is-dark" id="tableScore">
+                      <thead>
+                        <tr>    
+                          <th>Name</th>
+                          <th>Score</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        
+                      </tbody>
+                    </table>
+                  </section>
+                <button class="nes-btn is-warning" id="btnReturnScore">Retour au menu</button>
+            </article>
+            <article id="articleCredits" class="disable">
+                <div class="nes-table-responsive" id="sectionScore">
+                    <table class="nes-table is-bordered is-dark" id="tableScore">
+                      <thead>
+                        <tr>    
+                          <th>Auteur</th>
+                          <th>Asset</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                            <tr>
+                                <th>James</th>
+                                <th>Le grincheux</th>
+                            </tr>
+                            <tr>
+                                <th>Bill</th>
+                                <th>Le grincheux</th>
+                            </tr>
+                      </tbody>
+                    </table>
+                </div>
+                  <button class="nes-btn is-warning" id="btnReturnCredits">Retour au menu</button>
+            </article>
+       
+    <script src="menu.js" type="module"></script>
+    <script type="module" src="main.js" ></script>
+</body>
+
+</html>

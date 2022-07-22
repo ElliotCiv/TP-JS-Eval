@@ -1,0 +1,69 @@
+#mainMenu{
+    position: absolute;
+
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url("./img/background_arcade.png");
+    background-size: 140%;
+    background-position-y: -23vh;
+    background-position-x: center;
+}
+
+#articleMenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 90vh;
+    
+}
+
+#articleEndgame{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#articleCredits{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 150px;
+    width: 100vw;
+    height: 90vh;
+}
+#articleScores{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100vw;
+    height: 90vh;
+    padding-top: 150px;
+}
+.disable{
+    display: none !important;
+}
+#divScore{
+    width: auto;
+}
+.nes-btn{
+    width: 10vw;
+    margin: 10px;
+    z-index: 10;
+    text-align: center;
+}
+.zoomOut{
+    transform : scale(3);
+    transition: 3s ease;
+}
+.zoomIn{
+    transform : scale(1);
+    transition: 3s ease;
+}
