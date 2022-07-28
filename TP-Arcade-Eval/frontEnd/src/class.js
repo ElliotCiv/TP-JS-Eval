@@ -66,7 +66,7 @@ class Entity {
     setPp() {
         let pp = document.querySelector(".enemy-pp");
         console.log(`set PP ${pp} ${this.imgPath}`);
-        pp.src = this.imgPath;
+        pp.src = this.imgPath+".png";
     }
     statusInit() {
         this.lifeBar.setAttribute("max", this.life);

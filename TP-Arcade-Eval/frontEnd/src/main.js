@@ -7,7 +7,8 @@ import {
   addMonsterInDeadZone
 } from "./generate.js";
 import { enemiesList } from "./data.js";
-import {undisable,disable,mainJeu,articleMenu,mainMenu,mainEndgame,header,articleCredits,articleScore,buttonJouer} from './menu.js'
+import {undisable,disable,mainJeu,articleMenu,mainMenu,mainEndgame,header,articleCredits,articleScore,buttonJouer} from './menu.js';
+
 
 //Gere le tour true = joueur, false = enemy
 let actualTurn = true;

@@ -10,7 +10,7 @@
  * @returns 
  */
 function randomEnemy(array){
-    let rand = Math.floor(Math.random() * array.length);
+    let rand = Math.floor(Math.random() * Object.keys(array).length)+3;
 
     return array[rand];
 }
@@ -25,12 +25,9 @@ function randomEnemy(array){
 
 function generateEnemy(enemiesList){
     //1
-    let name, life, att, def, url;
-    ([name, life, att, def, url] = randomEnemy(enemiesList));
-
-    console.log(name, life, att, def, url);
+    let enemy = randomEnemy(enemiesList);
     //2
-    let newEnemy = new Enemy(name, life, att, def, url);
+    let newEnemy = new Enemy(enemy.name, enemy.life, enemy.att, enemy.def, enemy.img);
     //3
     newEnemy.displayEnemy();
     return newEnemy;
@@ -71,7 +68,7 @@ function isItNullOrUndefined(toCheck){
 function addMonsterInDeadZone(monster){
    let deadZone = document.querySelector(".history");
    let newImg = document.createElement("img");
-   newImg.src = monster.imgPath;
+   newImg.src = monster.imgPath+".png";
    newImg.classList.add("dead-enemy");
    deadZone.append(newImg); 
 }

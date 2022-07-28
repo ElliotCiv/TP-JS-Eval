@@ -87,7 +87,7 @@ async function fetchScores(){
 let buttonJouer = document.querySelector('#btn-Jouer');
 let mainJeu = document.querySelector("#mainJeu");
 let mainMenu = document.querySelector("#mainMenu");
-let header = document.querySelector("#header")
+let header = document.querySelector("#header");
 
 // buttonJouer.addEventListener("click",function(){
 //   mainMenu.setAttribute("class","zoomOut");
@@ -114,6 +114,11 @@ btnEndgameQuit.addEventListener("click",function(){
 })
 
 btnEndgameSend.addEventListener("click",function(){
+  let input = document.querySelector(".nes-input");
+  let inputValue = input.value;
+  let pScore = document.querySelector(".pScoreEndgame");
+  let score = pScore.value;
+  
   disable(mainEndgame);  
   changeMessageStatus("Bienvenue dans fighting surface");
   undisable(header);
