@@ -6,3 +6,7 @@
 -Faire que le jeu est reinitialisé a chaque lancement
 -Appeler les monstres en base de données 
 -Envoyer les scores en base de données
+
+28/07
+Fait la reinitialisation et le fetch en BDD pour les montres
+Manque l'ajout de score en fin de partie
