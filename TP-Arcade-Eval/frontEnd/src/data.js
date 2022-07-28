@@ -12,8 +12,21 @@
     ["l'admin", 180, 45, 50, "img/barzork_admin.png"],
     [],
   ];
+let liste =[];
 
+  async function fetchMonster(){
+    return fetch('http://localhost/fighting_surface_api/monsters')
+        .then((r) => {
+          return r.json();
+        });
+  }
 
-
-
+function listeMonster(){
+  fetchMonster()
+  .then(data=>{
+        let myObj = Object.keys(data).length;
+        pushData(myObj,data);
+  })
+}
+console.log(liste);
   export {enemiesList};

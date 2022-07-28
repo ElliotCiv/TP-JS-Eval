@@ -27,6 +27,9 @@ let newEnemy = document.querySelector(".enemies-generator");
 let arrowSelector = document.querySelector(".turn-arrow > img");
 let attackBtn = document.querySelector(".attack-js");
 let specialBtn = document.querySelector(".special-js");
+let historique = document.querySelector(".history");
+let articleEnemies = document.querySelectorAll(".enemy>article");
+
 
 //Lancement du jeux
 
@@ -35,7 +38,18 @@ buttonJouer.addEventListener("click",function(){
   disable(articleMenu);
   setTimeout(function(){undisable(mainJeu)},1000);
   beginTheGame();
+  if(newEnemy.classList.contains("disable")){
+      newEnemy.classList.toggle("disable");
+  }
+  if(!articleEnemies[2].classList.contains("disable")){
+      articleEnemies[2].classList.toggle("disable");
+  }
+  articleEnemies[1].classList.toggle("disable");
   
+  while (historique.firstChild) {
+    historique.removeChild(historique.firstChild);
+  };
+  arrowSelector.setAttribute("class","");
 })
 
 
